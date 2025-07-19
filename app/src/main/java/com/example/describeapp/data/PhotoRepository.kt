@@ -10,7 +10,8 @@ class PhotoRepository {
     private val apiService = ApiClient.deepSeekApiService
     
     // Note: In a real app, this should be stored securely (not hardcoded)
-    private val apiKey = "YOUR_DEEPSEEK_API_KEY" // Replace with actual API key
+    // For testing, users need to replace this with their actual DeepSeek API key
+    private val apiKey = "sk-your-deepseek-api-key-here" // Replace with actual API key
     
     suspend fun getPhotoDescription(imageFile: File): Result<PhotoDescription> = withContext(Dispatchers.IO) {
         try {

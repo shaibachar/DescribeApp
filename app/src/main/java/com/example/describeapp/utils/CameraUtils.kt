@@ -26,6 +26,7 @@ object CameraUtils {
     fun capturePhoto(
         imageCapture: ImageCapture,
         outputFile: File,
+        context: Context,
         onImageCaptured: (File) -> Unit,
         onError: (ImageCaptureException) -> Unit
     ) {
@@ -33,14 +34,7 @@ object CameraUtils {
         
         imageCapture.takePicture(
             outputOptions,
-            ContextCompat.getMainExecutor(outputFile.parentFile?.let { 
-                // Get context from file's parent directory
-                null
-            } ?: run { 
-                // Fallback to creating the options without specific executor
-                outputOptions
-                return
-            }),
+            ContextCompat.getMainExecutor(context),
             object : ImageCapture.OnImageSavedCallback {
                 override fun onImageSaved(output: ImageCapture.OutputFileResults) {
                     onImageCaptured(outputFile)
