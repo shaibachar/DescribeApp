@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">אפליקציית תיאור</string>
+    <string name="take_photo">צלם תמונה</string>
+    <string name="retake_photo">צלם תמונה נוספת</string>
+    <string name="save_result">שמור תוצאה</string>
+    <string name="processing">מעבד...</string>
+    <string name="error_camera_permission">נדרשת הרשאת מצלמה</string>
+    <string name="error_api_call">נכשל בקבלת תיאור</string>
+    <string name="english_description">תיאור באנגלית:</string>
+    <string name="hebrew_description">תיאור בעברית:</string>
+    <string name="result_saved">התוצאה נשמרה בהצלחה</string>
+    <string name="error_saving">נכשל בשמירת התוצאה</string>
+</resources>
